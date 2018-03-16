@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Cancer Detection</title>
+    </head>
+    <body>
+        {% block content %}
+        <h3>Upload you report here:</h3>
+        <p>Browse for the pdf file that contents the reports of the patient</p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label>Please select a .pdf file</label><input type="file" name="myfile">
+            <br><button type="submit">Upload</button>
+        </form>
+        {% if Cancer_Type == 'Malignant' %}
+        <p>The Cancer is: {{ Cancer_Type }} </p>
+        <p>The word malignant is Latin for “badly born.” This type of tumor has the ability to multiply uncontrollably, to metastasize (spread) to various parts of the body and invade surrounding tissue. Malignant tumors are formed from abnormal cells that are highly unstable and travel via the blood stream, circulatory system, and lymphatic system. Malignant cells do not have chemical adhesion molecules to anchor  them to the original growth site that benign tumors possess.</p>
+        {% endif %}
+        {% if Cancer_Type == 'Benign' %}
+        <p>The Cancer is: {{ Cancer_Type }} </p>
+        <p>A benign tumor is not a cancerous tumor. Unlike cancer tumors, a non cancerous tumor is unable to spread throughout the body. A non malignant tumor can be serious if they are pressing a primary nerve, a main artery, or compresses brain matter. Overall, benign tumors respond well to treatment and the prognosis is usually favorable. Some suspected causes of benign tumors include a traumatic injury at the tumor location, chronic inflammation (or long-term stress that leads to inflammation), an undetected infection, or diet.</p>
+        {% endif %}
+        {% endblock %}
+    </body>
+</html>

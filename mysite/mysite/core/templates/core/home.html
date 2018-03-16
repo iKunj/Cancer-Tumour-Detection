@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Cancer Detection</title>
+    </head>
+    <body>
+        {% block content %}
+        <h3>Cancer Detection App</h3>
+        <h4>About</h4>
+        <img source="/home/accnt/mysite/mysite/core/templates/core/Fight-The-Fight-Find-The-Cure.png">
+        <p>Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. These contrast with benign tumors, which do not spread to other parts of the body. Possible signs and symptoms include a lump, abnormal bleeding, prolonged cough, unexplained weight loss, and a change in bowel movements.</p>
+        <p>Upload your report: <a href="{% url 'simple_upload' %}">Upload Report</a></p>
+        {% endblock %}
+    </body>
+</html>
