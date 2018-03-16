@@ -18,6 +18,9 @@
 ## Running Tests
 	predict.py contains the program to train the model using KNN classifier and also test the model and calculate confusion matrix and test score.
 
+## Dataset
+	tumourdata.csv file contains the dataset on which this model is trained
+
 ## Built with 
 	Python3
 	Tkinter
