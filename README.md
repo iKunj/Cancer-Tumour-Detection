@@ -32,4 +32,6 @@
 
 ## Developer
 	Tanish Sehgal 
+	Kunj Haria
+	Simith Bhojani
 
